@@ -31,9 +31,13 @@ namespace ByteBank
             }
         }
 
-
         public ContaCorrente(int agencia, int numero)
         {
+            if(agencia <= 0 || numero <= 0)
+            {
+                throw new Exception();
+            }
+
             Agencia = agencia;
             Numero = numero;
            
